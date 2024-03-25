@@ -1,0 +1,18 @@
+Justification and Reflection :-
+
+Tech Stack:
+	 The project uses Node.js with Express for the server and PostgreSQL for the database. Node.js was chosen for its non-blocking I/O model, 
+which is efficient for data-intensive real-time applications. Express is a minimal and flexible Node.js web application framework that provides a 
+robust set of features for web and mobile applications. PostgreSQL is a powerful, open-source object-relational database system with over 30 years
+ of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
+
+Design Decisions:
+	 The application is designed to be modular, with separate files for routes, controllers, and database configuration. This separation of 
+concerns makes the codebase easier to maintain and extend. The use of Express Router allows for clear and organized routing, and the use of async/await
+ syntax with Promises for handling asynchronous operations improves code readability and error handling.
+
+Challenges:
+	 One of the main challenges was implementing pagination in a way that was both efficient and user-friendly. The solution involved calculating 
+the total number of pages based on the number of events and the limit per page, then slicing the events array to get the events for the current page.
+ This approach ensures that the server only sends the necessary data to the client, reducing bandwidth usage and improving response times.
+

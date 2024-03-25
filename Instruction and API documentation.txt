@@ -1,0 +1,34 @@
+API Documentation
+Endpoints
+GET /api/v1/events
+Description: Retrieves all events.
+Parameters: None.
+Response: A list of all events.
+Error Codes: 500 - Internal Server Error.
+GET /api/v1/events/:date/:lat/:long/:page
+Description: Retrieves events by date, location, and paginated by page.
+Parameters:
+date (required): The date to search events for.
+lat (required): The latitude of the user's location.
+long (required): The longitude of the user's location.
+page (required): The page number for pagination. Default is 1.
+
+Response: A list of events matching the criteria, paginated.
+Error Codes: 500 - Internal Server Error.
+
+
+
+
+Instructions to Run Code:- 
+  1. Prerequisites: Ensure you have Node.js and PostgreSQL installed on your machine.
+  2. Setup: Clone the repository and navigate to the project directory.
+  3. Install Dependencies: Run npm install to install all required dependencies.
+  4. Database Setup: Create a database named eventFinder in PostgreSQL and update the db.js file with the correct credentials.
+  5. Run the Server: Execute node server.js to start the server. The server will listen on port 8080.
+  6. Testing: Use a tool like Postman or cURL to test the API endpoints.
+
+
+Demonstration
+For the demonstration, you can use Postman to send requests to your API and capture screenshots or a screen recording of the responses.
+ For example, to test the GET /api/v1/events/:date/:lat/:long/:page endpoint, you would send a GET request to http://localhost:8080/api/v1/events/2024-03-24/40.7128/-74.0060/1 
+and capture the response.
